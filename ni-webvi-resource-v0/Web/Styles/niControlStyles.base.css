@@ -143,8 +143,8 @@ jqx-calendar [next-month] > .jqx-container::after {
 
 jqx-power-button .jqx-input,
 jqx-check-box[checked] .jqx-input,
+ni-combo-box-selector .jqx-drop-down-button,
 jqx-drop-down-list .jqx-drop-down-button,
-ni-combo-box-selector > jqx-combo-box .jqx-drop-down-button,
 jqx-date-time-picker .jqx-calendar-button {
     font-family: 'NILVJSFontAwesome';
     font-style: normal;
@@ -164,7 +164,7 @@ jqx-check-box[checked] .jqx-input::after {
 }
 
 /* drop down arrow */
-jqx-combo-box .jqx-drop-down-button > span:first-of-type::after,
+ni-combo-box-selector > jqx-combo-box .jqx-drop-down-button>span:first-of-type::after,
 jqx-drop-down-list .jqx-drop-down-button::after  {
     content: '\f0d7';
     font-size: var(--ni-content-font-size);
@@ -377,8 +377,7 @@ jqx-list-item .jqx-list-item-container,
 jqx-drop-down-list .jqx-token,
 jqx-switch-button .jqx-false-content-container,
 jqx-switch-button .jqx-true-content-container,
-ni-tab-control .jqx-ribbon-item,
-jqx-combo-box .jqx-drop-down-button::after {
+ni-tab-control .jqx-ribbon-item {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -556,8 +555,7 @@ jqx-radio-button .jqx-input::after {
 
 jqx-drop-down-list .jqx-drop-down-button,
 jqx-numeric-text-box .jqx-numeric-text-box-radix-display,
-jqx-date-time-picker .jqx-calendar-button,
-jqx-combo-box .jqx-drop-down-button {
+jqx-date-time-picker .jqx-calendar-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -680,15 +678,14 @@ ni-enum-selector {
 
 ni-enum-selector > jqx-drop-down-list,
 ni-ring-selector > jqx-drop-down-list,
-jqx-drop-down-list jqx-list-box,
-jqx-combo-box,
-jqx-combo-box > jqx-list-box {
+ni-combo-box-selector > jqx-combo-box,
+jqx-drop-down-list jqx-list-box {
     font-size: inherit !important;
     font-family: inherit !important;
 }
 
-jqx-drop-down-list,
-jqx-combo-box {
+ni-combo-box-selector > jqx-combo-box,
+jqx-drop-down-list {
     display: flex;
     width: 100%;
     height: 100%;
@@ -699,12 +696,11 @@ ni-ring-selector > jqx-drop-down-list {
     height: 100% !important;
 }
 
-jqx-combo-box .jqx-container,
+ni-combo-box-selector .jqx-container,
 jqx-drop-down-list > .jqx-container {
     cursor: pointer;
 }
 
-jqx-combo-box .jqx-action-button,
 jqx-drop-down-list .jqx-action-button {
     display: flex;
     flex-direction: column;
@@ -716,17 +712,14 @@ jqx-drop-down-list .jqx-action-button {
     text-align: var(--ni-text-align);
 }
 
-jqx-combo-box .jqx-token,
 jqx-drop-down-list .jqx-token {
     max-width: 100%;
 }
 
-jqx-combo-box .jqx-drop-down,
 jqx-drop-down-list .jqx-drop-down {
     min-width: 100%;
 }
 
-jqx-combo-box .jqx-buttons-container,
 jqx-drop-down-list .jqx-buttons-container {
     width: inherit;
     height: inherit;
@@ -742,7 +735,7 @@ jqx-drop-down-list .jqx-buttons-container {
 * Combo Box
 **************************************/
 
-jqx-combo-box {
+ni-combo-box-selector > jqx-combo-box {
     --jqx-combo-box-background: var(--ni-control-background-color);
     --jqx-combo-box-background-active: var(--ni-control-background-color);
     --jqx-combo-box-background-hover: var(--ni-control-background-color);
@@ -754,29 +747,36 @@ jqx-combo-box {
     --jqx-editor-drop-down-button-width: 16px;
 }
 
-jqx-combo-box .jqx-drop-down-button,
-jqx-combo-box .jqx-content>.jqx-input {
+ni-combo-box-selector input {
+    align-items: var(--ni-text-align-as-flex);
+    text-align: var(--ni-text-align);
+    width: inherit;
+    height: inherit;
+}
+
+
+ni-combo-box-selector .jqx-drop-down-button,
+ni-combo-box-selector .jqx-content > .jqx-input {
     border-style: none;
 }
 
 
-jqx-combo-box .jqx-content {
+ni-combo-box-selector .jqx-content {
     position: static;
 }
 
 
-jqx-combo-box:not([animation='none']) .jqx-drop-down-button span {
+ni-combo-box-selector:not([animation='none']) .jqx-drop-down-button span {
     transition: none;
 }
 
-jqx-combo-box[opened] .jqx-drop-down-button span,
-jqx-combo-box .jqx-drop-down-button[top] span,
-jqx-combo-box .jqx-drop-down-button[center-top] span,
-jqx-combo-box[opened] .jqx-drop-down-button[bottom] span,
-jqx-combo-box[opened] .jqx-drop-down-button[center-bottom] span {
+ni-combo-box-selector > jqx-combo-box[opened] .jqx-drop-down-button span,
+ni-combo-box-selector > jqx-combo-box .jqx-drop-down-button[top] span,
+ni-combo-box-selector > jqx-combo-box .jqx-drop-down-button[center-top] span,
+ni-combo-box-selector > jqx-combo-box[opened] .jqx-drop-down-button[bottom] span,
+ni-combo-box-selector > jqx-combo-box[opened] .jqx-drop-down-button[center-bottom] span {
     transform: initial;
 }
-
 
 /*************************************
 * Ring

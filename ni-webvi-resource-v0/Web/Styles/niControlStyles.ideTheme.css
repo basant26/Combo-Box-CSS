@@ -448,30 +448,30 @@ jqx-list-item .jqx-list-item-container {
 * Dropdown
 **************************************/
 
-jqx-combo-box,
+ni-combo-box-selector > jqx-combo-box,
 jqx-drop-down-list {
     --ni-inner-button-width: 1rem;
 }
 
-jqx-combo-box>.jqx-container>.jqx-content,
+ni-combo-box-selector > jqx-combo-box > .jqx-container > .jqx-content,
 jqx-drop-down-list > .jqx-container > .jqx-content {
     border: var(--ni-border);
     background: var(--ni-control-background-color);
 }
 
-jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]):not([opened])>.jqx-container>.jqx-content:hover,
+ni-combo-box-selector > jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]):not([opened]) > .jqx-container > .jqx-content:hover,
 jqx-drop-down-list:not([readonly]):not(.ni-edit-time-indicator):not([disabled]):not([opened]) > .jqx-container > .jqx-content:hover {
     border-color: var(--ni-hover-border-color);
     background: var(--ni-hover-background);
 }
 
-jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>jqx.container>.jqx-content:active,
+ni-combo-box-selector > jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > jqx.container > .jqx-content:active,
 jqx-drop-down-list:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > jqx.container > .jqx-content:active {
     border-color: var(--ni-active-border-color);
 }
 
-jqx-combo-box[readonly] > .jqx.container > .jqx-content,
-jqx-combo-box.ni-edit-time-indicator > jqx.container >.jqx-content,
+ni-combo-box-selector > jqx-combo-box[readonly] > .jqx.container > .jqx-content,
+ni-combo-box-selector > jqx-combo-box .ni-edit-time-indicator > jqx.container > .jqx-content,
 jqx-drop-down-list[readonly] > .jqx.container > .jqx-content,
 jqx-drop-down-list.ni-edit-time-indicator > jqx.container > .jqx-content {
     background: var(--ni-indicator-background-color);
