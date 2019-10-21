@@ -742,6 +742,7 @@ jqx-drop-down-list .jqx-buttons-container {
 /*************************************
 * Combo Box
 **************************************/
+
 jqx-combo-box {
     --jqx-combo-box-background: var(--ni-control-background-color);
     --jqx-combo-box-background-active: var(--ni-control-background-color);
@@ -754,33 +755,16 @@ jqx-combo-box {
     --jqx-editor-drop-down-button-width: 16px;
 }
 
-jqx-combo-box .jqx-drop-down-button {
+jqx-combo-box .jqx-drop-down-button,
+jqx-combo-box .jqx-content>.jqx-input {
     border-style: none;
 }
 
-jqx-combo-box .jqx-input {
-    display: inherit;
-    align-items: center;
-    justify-content: center;
-    width: inherit;
-    height: inherit;
-    flex-direction: inherit;
-    cursor: inherit;
-    position: inherit;
-    overflow: hidden;
-    min-height: inherit;
+
+jqx-combo-box .jqx-content {
+    position: static;
 }
 
-jqx-combo-box .jqx-content > .jqx-input {
-    border-style: none;
-}
-
-jqx-combo-box input {
-    align-items: var(--ni-text-align-as-flex);
-    text-align: var(--ni-text-align);
-    width: inherit;
-    height: inherit;
-}
 
 jqx-combo-box:not([animation='none']) .jqx-drop-down-button span {
     transition: none;
@@ -791,14 +775,9 @@ jqx-combo-box .jqx-drop-down-button[top] span,
 jqx-combo-box .jqx-drop-down-button[center-top] span,
 jqx-combo-box[opened] .jqx-drop-down-button[bottom] span,
 jqx-combo-box[opened] .jqx-drop-down-button[center-bottom] span {
-    transform: none;
+    transform: initial;
 }
 
-ni-combo-box-selector jqx-combo-box {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
 
 /*************************************
 * Ring

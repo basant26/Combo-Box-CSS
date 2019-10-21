@@ -447,12 +447,13 @@ jqx-list-item .jqx-list-item-container {
 /*************************************
 * Dropdown
 **************************************/
+
 jqx-combo-box,
 jqx-drop-down-list {
     --ni-inner-button-width: 1rem;
 }
 
-jqx-combo-box> .jqx-container>.jqx-content,
+jqx-combo-box>.jqx-container>.jqx-content,
 jqx-drop-down-list > .jqx-container > .jqx-content {
     border: var(--ni-border);
     background: var(--ni-control-background-color);
@@ -469,14 +470,13 @@ jqx-drop-down-list:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) 
     border-color: var(--ni-active-border-color);
 }
 
-jqx-combo-box[readonly]>.jqx.container>.jqx-content,
-jqx-combo-box.ni-edit-time-indicator>jqx.container>.jqx-content,
+jqx-combo-box[readonly] > .jqx.container > .jqx-content,
+jqx-combo-box.ni-edit-time-indicator > jqx.container >.jqx-content,
 jqx-drop-down-list[readonly] > .jqx.container > .jqx-content,
 jqx-drop-down-list.ni-edit-time-indicator > jqx.container > .jqx-content {
     background: var(--ni-indicator-background-color);
 }
 
-jqx-combo-box .jqx-token,
 jqx-drop-down-list .jqx-token {
     padding: 0 0.25rem;
 }
