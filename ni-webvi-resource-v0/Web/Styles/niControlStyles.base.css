@@ -378,7 +378,6 @@ jqx-drop-down-list .jqx-token,
 jqx-switch-button .jqx-false-content-container,
 jqx-switch-button .jqx-true-content-container,
 ni-tab-control .jqx-ribbon-item,
-jqx-combo-box .jqx-token,
 jqx-combo-box .jqx-drop-down-button::after {
     overflow: hidden;
     white-space: nowrap;
