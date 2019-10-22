@@ -164,7 +164,7 @@ jqx-check-box[checked] .jqx-input::after {
 }
 
 /* drop down arrow */
-ni-combo-box-selector > jqx-combo-box .jqx-drop-down-button>span:first-of-type::after,
+ni-combo-box-selector > jqx-combo-box .jqx-drop-down-button > span:first-of-type::after,
 jqx-drop-down-list .jqx-drop-down-button::after  {
     content: '\f0d7';
     font-size: var(--ni-content-font-size);
@@ -745,6 +745,7 @@ ni-combo-box-selector > jqx-combo-box {
     --jqx-combo-box-color-active: var(--ni-foreground-color);
     --jqx-combo-box-color: var(--ni-foreground-color);
     --jqx-editor-drop-down-button-width: 16px;
+    --jqx-combo-box-border-width: 0px;
 }
 
 ni-combo-box-selector input {
@@ -754,17 +755,9 @@ ni-combo-box-selector input {
     height: inherit;
 }
 
-
-ni-combo-box-selector .jqx-drop-down-button,
-ni-combo-box-selector .jqx-content > .jqx-input {
-    border-style: none;
-}
-
-
-ni-combo-box-selector .jqx-content {
+ni-combo-box-selector > jqx-combo-box > .jqx-container > .jqx-content {
     position: static;
 }
-
 
 ni-combo-box-selector:not([animation='none']) .jqx-drop-down-button span {
     transition: none;
