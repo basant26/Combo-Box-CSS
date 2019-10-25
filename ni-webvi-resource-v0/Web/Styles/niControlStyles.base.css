@@ -678,13 +678,11 @@ ni-enum-selector {
 
 ni-enum-selector > jqx-drop-down-list,
 ni-ring-selector > jqx-drop-down-list,
-ni-combo-box-selector > jqx-combo-box,
 jqx-drop-down-list jqx-list-box {
     font-size: inherit !important;
     font-family: inherit !important;
 }
 
-ni-combo-box-selector > jqx-combo-box,
 jqx-drop-down-list {
     display: flex;
     width: 100%;
@@ -696,7 +694,6 @@ ni-ring-selector > jqx-drop-down-list {
     height: 100% !important;
 }
 
-ni-combo-box-selector .jqx-container,
 jqx-drop-down-list > .jqx-container {
     cursor: pointer;
 }
@@ -736,9 +733,9 @@ jqx-drop-down-list .jqx-buttons-container {
 **************************************/
 
 ni-combo-box-selector > jqx-combo-box {
-    --jqx-combo-box-background: var(--ni-control-background-color);
-    --jqx-combo-box-background-active: var(--ni-control-background-color);
-    --jqx-combo-box-background-hover: var(--ni-control-background-color);
+    --jqx-combo-box-background: var(--ni-background-color);
+    --jqx-combo-box-background-active: var(--ni-background-color);
+    --jqx-combo-box-background-hover: var(--ni-background-color);
     --jqx-combo-box-border: var(--ni-border-color);
     --jqx-combo-box-border-active: var(--ni-border-color);
     --jqx-combo-box-border-hover: var(--ni-hover-border-color);
@@ -746,6 +743,21 @@ ni-combo-box-selector > jqx-combo-box {
     --jqx-combo-box-color: var(--ni-foreground-color);
     --jqx-editor-drop-down-button-width: 16px;
     --jqx-combo-box-border-width: 0px;
+}
+
+ni-combo-box-selector > jqx-combo-box {
+    font-size: inherit !important;
+    font-family: inherit !important;
+}
+
+ni-combo-box-selector > jqx-combo-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+ni-combo-box-selector .jqx-container {
+    cursor: pointer;
 }
 
 ni-combo-box-selector input {
@@ -2003,10 +2015,12 @@ ni-tab-item ni-layout-panel {
 
 /**
 Explanation for the following rulesets:
+
 Child selectors (as opposed to descendant selectors) are necessary because we 
 want to allow for nested containers with different layout systems. Consider this 
 example, where a flexible panel contains a tab control with an absolute layout
 tab item, and another tab control within that tab item:
+
 <ni-front-panel layout="flexible">
     <ni-flexible-layout-group><ni-flexible-layout-wrapper><ni-flexible-layout-container><ni-flexible-layout-component>
         <ni-tab-control><ni-tab-item layout="absolute"><ni-layout-panel>
@@ -2015,6 +2029,7 @@ tab item, and another tab control within that tab item:
         ...
     ...
 ...
+
 Here, we want to select the outer tab control, but not the inner one. So we only
 select immediate ni-tab-control children of flexible components.
 

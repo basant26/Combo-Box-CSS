@@ -69,7 +69,7 @@
     /* value states */
     --ni-false-background: var(--ni-control-background-gradient);
     --ni-false-foreground-color: var(--ni-foreground-color);
-
+    
     --ni-true-background: var(--ni-highlight);
     --ni-true-foreground-color: var(--ni-true-white);
 
@@ -171,7 +171,7 @@ ni-flexible-layout-container {
 * Labels
 **************************************/
 
-ni-label>label {
+ni-label > label {
     color: var(--ni-foreground-color);
 }
 
@@ -179,35 +179,35 @@ ni-label>label {
 * Buttons
 **************************************/
 
-jqx-toggle-button>.jqx-container,
-jqx-power-button>.jqx-container,
-jqx-led>.jqx-container,
+jqx-toggle-button > .jqx-container,
+jqx-power-button > .jqx-container,
+jqx-led > .jqx-container,
 jqx-check-box .jqx-input {
     border: var(--ni-border);
     background: var(--ni-false-background);
     color: var(--ni-false-foreground-color);
 }
 
-jqx-toggle-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:hover,
-jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:hover,
-jqx-led:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:hover,
-jqx-check-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:hover .jqx-input,
-jqx-radio-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:hover .jqx-input {
+jqx-toggle-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:hover,
+jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:hover,
+jqx-led:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:hover,
+jqx-check-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:hover .jqx-input,
+jqx-radio-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:hover .jqx-input {
     border-color: var(--ni-hover-border-color);
 }
 
-jqx-toggle-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:active,
-jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:active,
-jqx-led:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:active,
-jqx-check-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:active .jqx-input,
-jqx-radio-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:active .jqx-input,
+jqx-toggle-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:active,
+jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:active,
+jqx-led:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:active,
+jqx-check-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:active .jqx-input,
+jqx-radio-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:active .jqx-input,
 .jqx-checkbox .jqx-checkbox-default:active {
     border-color: var(--ni-active-border-color);
 }
 
-jqx-toggle-button[checked]>.jqx-container,
-jqx-power-button[checked]>.jqx-container,
-jqx-led[checked]>.jqx-container,
+jqx-toggle-button[checked] > .jqx-container,
+jqx-power-button[checked] > .jqx-container,
+jqx-led[checked] > .jqx-container,
 jqx-check-box[checked] .jqx-input {
     background: var(--ni-true-background);
     color: var(--ni-true-foreground-color);
@@ -222,15 +222,16 @@ jqx-radio-button .jqx-label {
 * Toggle button
 **************************************/
 
-jqx-toggle-button {}
+jqx-toggle-button {
+}
 
-jqx-toggle-button>.jqx-container {
+jqx-toggle-button > .jqx-container {
     border-color: var(--ni-border-color);
     border-image: var(--ni-border-gradient);
     border-image-slice: 1;
-}
+} 
 
-jqx-toggle-button>.jqx-container {
+jqx-toggle-button > .jqx-container {
     padding: 0.25rem;
 }
 
@@ -242,20 +243,20 @@ jqx-toggle-button .ni-glyph {
 * Power button
 **************************************/
 
-jqx-power-button>.jqx-container {
+jqx-power-button > .jqx-container {
     border-radius: 50%;
 }
 
-jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:hover {
+jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:hover {
     background: var(--ni-hover-background);
 }
 
-jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:active {
+jqx-power-button:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:active {
     background: var(--ni-active-background);
     color: var(--ni-active-foreground-color);
 }
 
-jqx-power-button[checked]:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>.jqx-container:hover {
+jqx-power-button[checked]:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > .jqx-container:hover {
     background: var(--ni-true-background);
     color: var(--ni-true-foreground-color);
 }
@@ -336,24 +337,24 @@ jqx-calendar .jqx-footer-component-today:active {
 * Spin buttons
 **************************************/
 
-jqx-numeric-text-box jqx-repeat-button>.jqx-container,
-jqx-calendar .jqx-footer-component-hour jqx-repeat-button>.jqx-container,
-jqx-calendar .jqx-footer-component-minute jqx-repeat-button>.jqx-container,
+jqx-numeric-text-box jqx-repeat-button > .jqx-container,
+jqx-calendar .jqx-footer-component-hour jqx-repeat-button > .jqx-container,
+jqx-calendar .jqx-footer-component-minute jqx-repeat-button > .jqx-container,
 ni-array-viewer .jqx-array-indexer .jqx-action-button {
     border: var(--ni-border) !important;
     background: var(--ni-control-background-gradient);
 }
 
-jqx-numeric-text-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-repeat-button>.jqx-container:hover,
-jqx-calendar .jqx-footer-component-hour jqx-repeat-button>.jqx-container:hover,
-jqx-calendar .jqx-footer-component-minute jqx-repeat-button>.jqx-container:hover,
+jqx-numeric-text-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-repeat-button > .jqx-container:hover,
+jqx-calendar .jqx-footer-component-hour jqx-repeat-button > .jqx-container:hover,
+jqx-calendar .jqx-footer-component-minute jqx-repeat-button > .jqx-container:hover,
 ni-array-viewer:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) .jqx-array-indexer .jqx-action-button:hover {
     border-color: var(--ni-hover-border-color) !important;
     background: var(--ni-hover-background);
 }
 
-jqx-numeric-text-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-repeat-button>.jqx-container:active,
-jqx-calendar .jqx-footer-component>span jqx-repeat-button>.jqx-container:active,
+jqx-numeric-text-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-repeat-button > .jqx-container:active,
+jqx-calendar .jqx-footer-component > span jqx-repeat-button > .jqx-container:active,
 ni-array-viewer:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) .jqx-array-indexer .jqx-action-button:active {
     border-color: var(--ni-active-border-color) !important;
     background: var(--ni-active-background);
@@ -363,7 +364,7 @@ ni-array-viewer:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) .jq
 jqx-numeric-text-box .jqx-spin-buttons-container,
 jqx-calendar .jqx-footer-component-hour jqx-repeat-button,
 jqx-calendar .jqx-footer-component-minute jqx-repeat-button,
-ni-array-viewer .jqx-array-indexer>div {
+ni-array-viewer .jqx-array-indexer > div {
     margin-left: 0.125rem;
 }
 
@@ -383,25 +384,25 @@ ni-array-viewer .jqx-array-indexer .jqx-action-button:first-child {
 * Lists & items
 **************************************/
 
-jqx-list-box>.jqx-container,
+jqx-list-box > .jqx-container,
 jqx-numeric-text-box .jqx-drop-down {
     border: var(--ni-border);
     background: var(--ni-control-background-color);
 }
 
-jqx-list-item>.jqx-container,
+jqx-list-item > .jqx-container,
 jqx-numeric-text-box .jqx-list-item {
     border: var(--ni-border);
     border-color: transparent;
 }
 
-jqx-list-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-list-item:not([selected])>.jqx-container:hover,
+jqx-list-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-list-item:not([selected]) > .jqx-container:hover,
 jqx-numeric-text-box .jqx-list-item:hover {
     border-color: var(--ni-hover-border-color);
     background: var(--ni-hover-background);
 }
 
-jqx-list-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-list-item>.jqx-container:active,
+jqx-list-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) jqx-list-item > .jqx-container:active,
 jqx-numeric-text-box .jqx-list-item:active {
     border-color: var(--ni-active-border-color);
 }
@@ -426,7 +427,7 @@ jqx-numeric-text-box .jqx-list-item:last-child {
 * Radio button list
 **************************************/
 
-ni-radio-button-group[orientation='horizontal'] jqx-radio-button:not(:last-child)>.jqx-container {
+ni-radio-button-group[orientation='horizontal'] jqx-radio-button:not(:last-child) > .jqx-container {
     padding-right: 0.75rem;
 }
 
@@ -434,8 +435,8 @@ ni-radio-button-group[orientation='horizontal'] jqx-radio-button:not(:last-child
 * List box
 **************************************/
 
-jqx-list-box[readonly]>.jqx-container,
-jqx-list-box.ni-edit-time-indicator>.jqx-container {
+jqx-list-box[readonly] > .jqx-container,
+jqx-list-box.ni-edit-time-indicator > .jqx-container {
     background: var(--ni-indicator-background-color);
 }
 
@@ -447,37 +448,58 @@ jqx-list-item .jqx-list-item-container {
 * Dropdown
 **************************************/
 
-ni-combo-box-selector>jqx-combo-box,
 jqx-drop-down-list {
     --ni-inner-button-width: 1rem;
 }
 
-ni-combo-box-selector>jqx-combo-box>.jqx-container>.jqx-content,
-jqx-drop-down-list>.jqx-container>.jqx-content {
+jqx-drop-down-list > .jqx-container > .jqx-content {
     border: var(--ni-border);
     background: var(--ni-control-background-color);
 }
 
-ni-combo-box-selector>jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]):not([opened])>.jqx-container>.jqx-content:hover,
-jqx-drop-down-list:not([readonly]):not(.ni-edit-time-indicator):not([disabled]):not([opened])>.jqx-container>.jqx-content:hover {
+jqx-drop-down-list:not([readonly]):not(.ni-edit-time-indicator):not([disabled]):not([opened]) > .jqx-container > .jqx-content:hover {
     border-color: var(--ni-hover-border-color);
     background: var(--ni-hover-background);
 }
 
-ni-combo-box-selector>jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>jqx.container>.jqx-content:active,
-jqx-drop-down-list:not([readonly]):not(.ni-edit-time-indicator):not([disabled])>jqx.container>.jqx-content:active {
+jqx-drop-down-list:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > jqx.container > .jqx-content:active {
     border-color: var(--ni-active-border-color);
 }
 
-ni-combo-box-selector>jqx-combo-box[readonly]>.jqx.container>.jqx-content,
-ni-combo-box-selector>jqx-combo-box .ni-edit-time-indicator>jqx.container>.jqx-content,
-jqx-drop-down-list[readonly]>.jqx.container>.jqx-content,
-jqx-drop-down-list.ni-edit-time-indicator>jqx.container>.jqx-content {
+jqx-drop-down-list[readonly] > .jqx.container > .jqx-content,
+jqx-drop-down-list.ni-edit-time-indicator > jqx.container > .jqx-content {
     background: var(--ni-indicator-background-color);
 }
 
 jqx-drop-down-list .jqx-token {
     padding: 0 0.25rem;
+}
+
+/*************************************
+* Combo Box
+**************************************/
+
+ni-combo-box-selector > jqx-combo-box {
+    --ni-inner-button-width: 1rem;
+}
+
+ni-combo-box-selector > jqx-combo-box > .jqx-container > .jqx-content {
+    border: var(--ni-border);
+    background: var(--ni-control-background-color);
+}
+
+ni-combo-box-selector > jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]):not([opened]) > .jqx-container > .jqx-content:hover {
+    border-color: var(--ni-hover-border-color);
+    background: var(--ni-hover-background);
+}
+
+ni-combo-box-selector > jqx-combo-box:not([readonly]):not(.ni-edit-time-indicator):not([disabled]) > jqx.container > .jqx-content:active {
+    border-color: var(--ni-active-border-color);
+}
+
+ni-combo-box-selector > jqx-combo-box[readonly] > .jqx.container > .jqx-content,
+ni-combo-box-selector > jqx-combo-box .ni-edit-time-indicator > jqx.container > .jqx-content {
+    background: var(--ni-indicator-background-color);
 }
 
 /*************************************
@@ -496,14 +518,14 @@ ni-hyperlink {
     --ni-foreground-color: var(--ni-highlight);
 }
 
-ni-hyperlink>a,
-ni-hyperlink>a:active,
-ni-hyperlink>a:visited {
+ni-hyperlink > a,
+ni-hyperlink > a:active,
+ni-hyperlink > a:visited {
     color: var(--ni-foreground-color);
     text-decoration: none;
 }
 
-ni-hyperlink>a:hover {
+ni-hyperlink > a:hover {
     text-decoration: underline;
 }
 
@@ -566,12 +588,12 @@ jqx-date-time-picker .jqx-calendar-button {
 * Calendar
 **************************************/
 
-jqx-calendar>.jqx-container {
+jqx-calendar > .jqx-container {
     border: var(--ni-border);
     background: var(--ni-control-background-color);
 }
 
-jqx-calendar .jqx-calendar-header jqx-repeat-button>.jqx-container:hover {
+jqx-calendar .jqx-calendar-header jqx-repeat-button > .jqx-container:hover {
     color: var(--ni-highlight);
 }
 
@@ -646,8 +668,8 @@ jqx-switch-button .jqx-true-content-container {
 }
 
 jqx-switch-button .jqx-thumb::before {
-    border: var(--ni-border);
-    background: var(--ni-control-background-gradient);
+   border: var(--ni-border);
+   background: var(--ni-control-background-gradient);
 }
 
 jqx-switch-button .jqx-thumb::after {
@@ -656,18 +678,18 @@ jqx-switch-button .jqx-thumb::after {
 }
 
 jqx-switch-button:not([readonly]) .jqx-thumb:hover::after {
-    border-color: var(--ni-hover-border-color);
-    background: var(--ni-hover-background);
+   border-color: var(--ni-hover-border-color);
+   background: var(--ni-hover-background);
 }
 
 jqx-switch-button:not([readonly]) .jqx-thumb:active::after,
 jqx-switch-button:not([readonly]) .jqx-thumb:active:hover::after {
-    border-color: var(--ni-active-border-color);
+   border-color: var(--ni-active-border-color);
 }
 
 jqx-switch-button[disabled] .jqx-thumb:hover::after {
     border: var(--ni-border);
-    background: var(--ni-control-background-gradient);
+    background: var(--ni-control-background-gradient);   
 }
 
 jqx-switch-button[checked] .jqx-thumb::before {
@@ -783,7 +805,7 @@ jqx-slider .jqx-track-container:hover .jqx-thumb {
 
 jqx-slider[disabled] .jqx-track-container:hover .jqx-thumb {
     border: var(--ni-border);
-    background: var(--ni-control-background-gradient);
+    background: var(--ni-control-background-gradient);   
 }
 
 jqx-slider .jqx-thumb:active,
@@ -804,9 +826,9 @@ jqx-slider .jqx-tooltip {
 * Linear progress
 **************************************/
 
-jqx-progress-bar>.jqx-container::before {
-    border: var(--ni-border);
-    background: var(--ni-control-background-gradient);
+jqx-progress-bar > .jqx-container::before {
+   border: var(--ni-border);
+   background: var(--ni-control-background-gradient);
 }
 
 jqx-progress-bar .jqx-value {
@@ -817,7 +839,7 @@ jqx-progress-bar .jqx-value {
 * Radial progress
 **************************************/
 
-jqx-circular-progress-bar>.jqx-container {
+jqx-circular-progress-bar > .jqx-container {
     border: var(--ni-border);
 }
 
@@ -901,8 +923,8 @@ ni-cursor-legend jqx-color-picker[hover]:not([opened]) .jqx-drop-down-button {
     border-color: var(--ni-hover-border-color);
 }
 
-ni-plot-legend jqx-drop-down-list>.jqx-container>.jqx-content,
-ni-cursor-legend jqx-drop-down-list>.jqx-container>.jqx-content {
+ni-plot-legend jqx-drop-down-list > .jqx-container > .jqx-content,
+ni-cursor-legend jqx-drop-down-list > .jqx-container > .jqx-content {
     border-color: var(--ni-border-color);
 }
 
@@ -910,7 +932,7 @@ ni-cursor-legend jqx-drop-down-list>.jqx-container>.jqx-content {
 * Array
 **************************************/
 
-ni-array-viewer> :not(.jqx-array) {
+ni-array-viewer > :not(.jqx-array) {
     display: none;
 }
 
@@ -925,7 +947,7 @@ ni-array-viewer[read-only] .jqx-array-big-container {
     background: var(--ni-indicator-background-color);
 }
 
-ni-array-viewer .jqx-array-element.jqx-fill-state-disabled>[ni-control-id]:not(jqx-numeric-text-box):not(jqx-date-time-picker):not(ni-enum-selector):not(ni-ring-selector) {
+ni-array-viewer .jqx-array-element.jqx-fill-state-disabled > [ni-control-id]:not(jqx-numeric-text-box):not(jqx-date-time-picker):not(ni-enum-selector):not(ni-ring-selector) {
     opacity: var(--ni-array-uninitialized-cell-opacity);
 }
 
@@ -1003,8 +1025,7 @@ ni-data-grid {
 
 ni-data-grid ni-string-control,
 ni-data-grid jqx-numeric-text-box,
-ni-data-grid jqx-drop-down-list,
-ni-data-grid jqx-combo-box {
+ni-data-grid jqx-drop-down-list {
     --ni-border: none;
     --ni-control-background-gradient: var(--ni-control-background-color);
     --ni-control-background-color: transparent;
@@ -1032,7 +1053,7 @@ ni-tab-item.ni-selected {
     background: var(--ni-background);
 }
 
-ni-tab-control[tab-selector-hidden]>div.jqx-ribbon {
+ni-tab-control[tab-selector-hidden] > div.jqx-ribbon {
     display: none;
 }
 
@@ -1061,19 +1082,19 @@ ni-tab-control .jqx-ribbon-item.jqx-ribbon-item-selected {
     color: var(--ni-foreground-color);
 }
 
-ni-tab-control[tab-strip-placement='Top']>.jqx-ribbon .jqx-ribbon-item-selected {
+ni-tab-control[tab-strip-placement='Top'] > .jqx-ribbon .jqx-ribbon-item-selected {
     border-bottom-color: transparent;
 }
 
-ni-tab-control[tab-strip-placement='Bottom']>.jqx-ribbon .jqx-ribbon-item-selected {
+ni-tab-control[tab-strip-placement='Bottom'] > .jqx-ribbon .jqx-ribbon-item-selected {
     border-top-color: transparent;
 }
 
-ni-tab-control[tab-strip-placement='Left']>.jqx-ribbon .jqx-ribbon-item-selected {
+ni-tab-control[tab-strip-placement='Left'] > .jqx-ribbon .jqx-ribbon-item-selected {
     border-right-color: transparent;
 }
 
-ni-tab-control[tab-strip-placement='Right']>.jqx-ribbon .jqx-ribbon-item-selected {
+ni-tab-control[tab-strip-placement='Right'] > .jqx-ribbon .jqx-ribbon-item-selected {
     border-left-color: transparent;
 }
 
@@ -1102,7 +1123,7 @@ ni-tab-control[tab-strip-placement='Right']:not([tab-selector-hidden]) ni-tab-it
 **************************************/
 
 jqx-scroll-bar div.jqx-scroll-button,
-ni-array-viewer .jqx-scrollbar-button-state-normal>div {
+ni-array-viewer .jqx-scrollbar-button-state-normal > div {
     border: var(--ni-border);
     border-color: transparent;
     background: transparent;
@@ -1110,14 +1131,14 @@ ni-array-viewer .jqx-scrollbar-button-state-normal>div {
 }
 
 jqx-scroll-bar div.jqx-scroll-button:hover,
-ni-array-viewer .jqx-scrollbar-button-state-normal>div:hover {
+ni-array-viewer .jqx-scrollbar-button-state-normal > div:hover {
     border-color: var(--ni-hover-border-color);
     background: var(--ni-hover-background);
     color: var(--ni-highlight);
 }
 
 jqx-scroll-bar div.jqx-scroll-button:active,
-ni-array-viewer .jqx-scrollbar-button-state-normal>div:active {
+ni-array-viewer .jqx-scrollbar-button-state-normal > div:active {
     background: var(--ni-active-background);
     color: var(--ni-active-foreground-color);
 }
@@ -1127,20 +1148,20 @@ ni-array-viewer .jqx-scrollbar-thumb-state-normal::before,
 ni-array-viewer .jqx-scrollbar-thumb-state-normal-horizontal::before {
     border: var(--ni-border);
     background: var(--ni-gray-neutral-68);
-}
+} 
 
 jqx-scroll-bar .jqx-thumb:hover,
 ni-array-viewer .jqx-scrollbar-thumb-state-normal:hover::before,
 ni-array-viewer .jqx-scrollbar-thumb-state-normal-horizontal:hover::before {
     border-color: var(--ni-hover-border-color);
     background: var(--ni-hover-background);
-}
+} 
 
 jqx-scroll-bar .jqx-thumb:active,
 ni-array-viewer .jqx-scrollbar-thumb-state-normal:active::before,
 ni-array-viewer .jqx-scrollbar-thumb-state-normal-horizontal:active::before {
     background: var(--ni-active-background);
-}
+} 
 
 jqx-scroll-bar {
     margin-bottom: 0.125rem;
@@ -1151,12 +1172,12 @@ jqx-scroll-bar[orientation='vertical'] {
     margin-right: 0.125rem;
 }
 
-jqx-scroll-bar>.jqx-container,
+jqx-scroll-bar > .jqx-container,
 ni-array-viewer .jqx-array-scrollbar-container-horizontal {
     padding: 0 0.125rem;
 }
 
-jqx-scroll-bar[orientation='vertical']>.jqx-container,
+jqx-scroll-bar[orientation='vertical'] > .jqx-container,
 ni-array-viewer .jqx-array-scrollbar-container-vertical {
     padding: 0.125rem 0;
 }
