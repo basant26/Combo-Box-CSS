@@ -2003,12 +2003,10 @@ ni-tab-item ni-layout-panel {
 
 /**
 Explanation for the following rulesets:
-
 Child selectors (as opposed to descendant selectors) are necessary because we 
 want to allow for nested containers with different layout systems. Consider this 
 example, where a flexible panel contains a tab control with an absolute layout
 tab item, and another tab control within that tab item:
-
 <ni-front-panel layout="flexible">
     <ni-flexible-layout-group><ni-flexible-layout-wrapper><ni-flexible-layout-container><ni-flexible-layout-component>
         <ni-tab-control><ni-tab-item layout="absolute"><ni-layout-panel>
@@ -2017,7 +2015,6 @@ tab item, and another tab control within that tab item:
         ...
     ...
 ...
-
 Here, we want to select the outer tab control, but not the inner one. So we only
 select immediate ni-tab-control children of flexible components.
 
