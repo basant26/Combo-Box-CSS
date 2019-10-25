@@ -678,13 +678,11 @@ ni-enum-selector {
 
 ni-enum-selector > jqx-drop-down-list,
 ni-ring-selector > jqx-drop-down-list,
-ni-combo-box-selector > jqx-combo-box,
 jqx-drop-down-list jqx-list-box {
     font-size: inherit !important;
     font-family: inherit !important;
 }
 
-ni-combo-box-selector > jqx-combo-box,
 jqx-drop-down-list {
     display: flex;
     width: 100%;
@@ -696,7 +694,6 @@ ni-ring-selector > jqx-drop-down-list {
     height: 100% !important;
 }
 
-ni-combo-box-selector .jqx-container,
 jqx-drop-down-list > .jqx-container {
     cursor: pointer;
 }
@@ -746,6 +743,21 @@ ni-combo-box-selector > jqx-combo-box {
     --jqx-combo-box-color: var(--ni-foreground-color);
     --jqx-editor-drop-down-button-width: 16px;
     --jqx-combo-box-border-width: 0px;
+}
+
+ni-combo-box-selector > jqx-combo-box {
+    font-size: inherit !important;
+    font-family: inherit !important;
+}
+
+ni-combo-box-selector > jqx-combo-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+ni-combo-box-selector .jqx-container {
+    cursor: pointer;
 }
 
 ni-combo-box-selector input {
